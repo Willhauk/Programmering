@@ -2,6 +2,8 @@
 
 namespace PictureShapes
 {
+
+
     class Dice
     {
         private Square wall;
@@ -14,6 +16,7 @@ namespace PictureShapes
             numberGenerator.Next(1, 7);
             number = numberGenerator.Next(1, 7);
 
+            wall.MakeVisible();
             prickar[1].MakeInVisible();
             prickar[2].MakeInVisible();
             prickar[3].MakeInVisible();
@@ -67,57 +70,57 @@ namespace PictureShapes
             wall.MakeVisible();
             wall.ChangeColor("black");
             wall.ChangeSize(400);
-            wall.MoveHorizontal(100);
-            wall.MoveVertical(-100);
+            wall.XPosition = 150;
+            wall.YPosition = 100;
           
             prickar[1] = new Circle();
             prickar[1].MakeVisible();
-            prickar[1].ChangeColor("red");
+            prickar[1].ChangeColor("white");
             prickar[1].ChangeSize(75);
-            prickar[1].MoveHorizontal(340);
-            prickar[1].MoveVertical(100);
+            prickar[1].XPosition = 440;
+            prickar[1].YPosition = 130;
             
             prickar[2] = new Circle();
             prickar[2].MakeVisible();
-            prickar[2].ChangeColor("red");
+            prickar[2].ChangeColor("white");
             prickar[2].ChangeSize(75);
-            prickar[2].MoveHorizontal(340);
-            prickar[2].MoveVertical(225);
+            prickar[2].XPosition = 440;
+            prickar[2].YPosition = 255;
 
             prickar[3] = new Circle();
             prickar[3].MakeVisible();
-            prickar[3].ChangeColor("red");
+            prickar[3].ChangeColor("white");
             prickar[3].ChangeSize(75);
-            prickar[3].MoveHorizontal(340);
-            prickar[3].MoveVertical(350);
+            prickar[3].XPosition = 440;
+            prickar[3].YPosition = 380;
 
             prickar[4] = new Circle();
             prickar[4].MakeVisible();
-            prickar[4].ChangeColor("red");
+            prickar[4].ChangeColor("white");
             prickar[4].ChangeSize(75);
-            prickar[4].MoveHorizontal(80);
-            prickar[4].MoveVertical(100);
+            prickar[4].XPosition = 180;
+            prickar[4].YPosition = 130;
 
             prickar[5] = new Circle();
             prickar[5].MakeVisible();
-            prickar[5].ChangeColor("red");
+            prickar[5].ChangeColor("white");
             prickar[5].ChangeSize(75);
-            prickar[5].MoveHorizontal(80);
-            prickar[5].MoveVertical(225);
+            prickar[5].XPosition = 180;
+            prickar[5].YPosition = 255;
 
             prickar[6] = new Circle();
             prickar[6].MakeVisible();
-            prickar[6].ChangeColor("red");
+            prickar[6].ChangeColor("white");
             prickar[6].ChangeSize(75);
-            prickar[6].MoveHorizontal(80);
-            prickar[6].MoveVertical(350);
+            prickar[6].XPosition = 180;
+            prickar[6].YPosition = 380;
 
             prickar[0] = new Circle();
             prickar[0].MakeVisible();
-            prickar[0].ChangeColor("red");
+            prickar[0].ChangeColor("white");
             prickar[0].ChangeSize(75);
-            prickar[0].MoveHorizontal(210);
-            prickar[0].MoveVertical(225);
+            prickar[0].XPosition = 310;
+            prickar[0].YPosition = 255;
 
 
         }
