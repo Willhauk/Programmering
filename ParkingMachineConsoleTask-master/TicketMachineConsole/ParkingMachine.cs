@@ -22,12 +22,14 @@ namespace ParkingMachineConsole
 
         // Cost to park.
         private int costPerHour;
+        
 
-        public ParkingMachine()
+        public ParkingMachine(int c)
         {
             total = 0;
             currentTotal = 0;
-            costPerHour = 20;
+            costPerHour = c;
+            
         }
 
         public int CurrentTotal
@@ -49,6 +51,14 @@ namespace ParkingMachineConsole
 
         }
 
+        public int CostPerHour
+        {
+            get
+            {
+                return costPerHour;
+            }
+        }
+
 
         public int Cancel()
         {
@@ -58,20 +68,40 @@ namespace ParkingMachineConsole
 
         }
 
-        public string BuyTicket()
+        public Ticket BuyTicket()
         {
             Total = Total + currentTotal;
+            DateTime date = GetValidTo();
+            TimeSpan time = GetParkingTimeSpan();
+            int total2 = currentTotal;
+            currentTotal = 0;
+            //  return ("Parking ticket valid for:" + 
+            //    Environment.NewLine + time.Days + " days" + 
+            //  Environment.NewLine + time.Hours + " hours" + 
+            //Environment.NewLine + time.Minutes + " minutes" + Environment.NewLine + Environment.NewLine + "Valid to: " + date);
+            return new Ticket(total2, costPerHour);
+        }
+       
+        
+        
+        public DateTime GetValidTo()
+        {
+            DateTime date = DateTime.Now;
+            TimeSpan time = GetParkingTimeSpan();
+            date = date.Add(time);
+            return date;
+        }
+
+        public TimeSpan GetParkingTimeSpan()
+        {
             int antalDagar = currentTotal / (costPerHour * 24);
             int rest = currentTotal % (costPerHour * 24);
             int antalTimmar = rest / costPerHour;
             int timmarRest = rest % costPerHour;
             int antalMinuter = timmarRest * 60 / costPerHour;
-            int minuterRest = timmarRest *  60 % costPerHour;
-            currentTotal = 0;
-            return ("Parking Ticket valid for:" + Environment.NewLine + antalDagar + " days" + Environment.NewLine + antalTimmar + " Hours" + Environment.NewLine + antalMinuter + "Minutes");
-
-
-
+            int minuterRest = timmarRest * 60 % costPerHour;
+            TimeSpan timeSpan = new TimeSpan(days: antalDagar, hours: antalTimmar, minutes: antalMinuter, seconds: 0);
+            return timeSpan;
         }
     }
 }

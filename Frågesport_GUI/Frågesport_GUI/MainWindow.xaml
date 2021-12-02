@@ -1,0 +1,41 @@
+﻿<Window x:Class="Frågesport_GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Frågesport_GUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Name="förstaSida">
+        <TextBlock x:Name="välkommen" FontSize="50" Margin="10" TextAlignment="Center"><Run Text="Välkommen till "/><Run Language="sv-se" Text="Jacks"/><Run Text=" Frågesport!"/></TextBlock>
+        <TextBlock Name="emptySpace" FontSize="60"></TextBlock>
+        <Button Name="startKnapp" FontSize="50" Margin="10" Content="Klicka här för att starta" Width="520" Background="Red" Click="startKnapp_Click"></Button>
+        <TextBlock Name="fråga" FontSize="40" Margin="10" HorizontalAlignment="Center" Visibility="Collapsed"></TextBlock>
+        <!-- <StackPanel Name="svar_ruta" Orientation="Horizontal">
+            <Button Name="svar1" FontSize="45" Margin="60" HorizontalAlignment="Left" Click="svar1_Click" Visibility="Collapsed" Width="260" Background="red"></Button>
+            <Button Name="svar2" FontSize="45" Margin="60" HorizontalAlignment="Right" Click="svar2_Click" Visibility="Collapsed" Width="260" Background="red"></Button>
+        </StackPanel>
+        <StackPanel Name="hej"></StackPanel>
+        <StackPanel Name="svar_ruta2" Orientation="Horizontal">
+            <Button Name="svar3" FontSize="45" Margin="60" HorizontalAlignment="Left" Click="svar3_Click" Visibility="Collapsed" Width="260" Background="red"></Button>
+            <Button Name="svar4" FontSize="45" Margin="60" HorizontalAlignment="Right" Click="svar4_Click" Visibility="Collapsed" Width="260" Background="red"></Button>
+        </StackPanel>
+        -->
+        
+        <StackPanel Name="svars_knappar" Orientation="Horizontal">
+            
+        </StackPanel>
+        <StackPanel Name="svars_knappar2" Orientation="Horizontal">
+            
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Name="du_gissade_rätt" FontSize="45" Margin="40" HorizontalAlignment="Center" Text="Du gissade rätt!" Visibility="Collapsed"></TextBlock>
+            <TextBlock Name="du_gissade_fel" FontSize="45" Margin="40" HorizontalAlignment="Center" Text="Du gissade fel!" Visibility="Collapsed"></TextBlock>
+            <Button Name="nästaFråga" FontSize="45" Margin="10" Background="red" Content="Nästa Fråga" Click="nästaFråga_Click" Visibility="Collapsed"></Button>
+            <TextBlock Name="klar" FontSize="45" Margin="10" Background="red" Text="Du är Klar!" Visibility="Collapsed" HorizontalAlignment="Center"></TextBlock>
+        </StackPanel>
+        
+       
+    </StackPanel>
+    
+</Window>

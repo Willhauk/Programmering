@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkingMachineConsole", "Ti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestParkingMachine", "UnitTestTicketMachine\UnitTestParkingMachine.csproj", "{2D322AA7-96AF-48B2-AE45-4A8497B6DFE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking", "Banking\Banking.csproj", "{F2FDD935-CDEB-4EA9-A58C-E195E2E47070}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2D322AA7-96AF-48B2-AE45-4A8497B6DFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D322AA7-96AF-48B2-AE45-4A8497B6DFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D322AA7-96AF-48B2-AE45-4A8497B6DFE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2FDD935-CDEB-4EA9-A58C-E195E2E47070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2FDD935-CDEB-4EA9-A58C-E195E2E47070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2FDD935-CDEB-4EA9-A58C-E195E2E47070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2FDD935-CDEB-4EA9-A58C-E195E2E47070}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
